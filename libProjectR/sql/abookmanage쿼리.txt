@@ -1,0 +1,41 @@
+CREATE TABLE abookmanage (
+
+   code VARCHAR2 (60) primary key,
+     bookname varchar2(400) ,
+ author VARCHAR2(30) ,
+editorial VARCHAR2(40) ,
+       publish_day DATE,
+      condition VARCHAR2(50) ,
+      kind VARCHAR2(20) ,
+       remain number(30) ,
+       category number(20) 
+     );
+
+
+SELECT * FROM abookmanage WHERE bookname LIKE %?%;
+
+
+ insert into abookmange 
+(code, 
+bookname,
+author,
+editorial,
+publish_day,
+condition,
+kind,
+remain,
+category)
+VALUES
+('AAA123', 
+'장지웅1', 
+'저자' ,
+'출판사',
+sysdate,
+'책상태',
+'장르',
+1234,
+2345
+);
+
+
+SELECT * FROM abookmanage WHERE bookname LIKE '%장지웅%';
